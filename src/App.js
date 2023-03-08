@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Data from './Data'
 
-function App() {
+const App = () => {
+  const [inputValue, setInputValue] = useState("All")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='movie-site'>
+      <div className='search-bar'>
+        <input type="tel" placeholder='Enter a movie Name' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+        <button>Search</button>
+      </div>
+      <div className='container'>
+        {Data.map((item, index) => {
+          if (inputValue === "All" || inputValue=== null)
+            return (
+              <div className='movies'>
+                <img src={item.image} />
+                <h4>{item.Name}</h4>
+                <p>{item.price}</p>
+              </div>
+            )
+          else {
+            if (item.Name.includes(inputValue)) {
+              return (
+                <div className='movies'>
+                  <img src={item.image} />
+                  <h4>{item.Name}</h4>
+                  <p>{item.price}</p>
+                </div>
+              )
+            }
+          }
+        })}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
