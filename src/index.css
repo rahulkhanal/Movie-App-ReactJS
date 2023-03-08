@@ -41,3 +41,6 @@ img{
 .movies{
   line-height: 0px;
 }
+.movies img{
+  box-shadow: 0 0 8px black;
+}
