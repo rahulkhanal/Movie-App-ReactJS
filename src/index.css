@@ -19,18 +19,30 @@ code {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.search-bar input, .search-bar button{
-  padding: 5px;
-  font-size: 1.3rem;
-  border: 2px solid black;
+.search-bar input{
+  padding: 3px;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 50%;
+  padding: 5px 1rem;
+}
+.search-bar input:focus{
+  padding: 3px;
+  font-size: 1rem;
+  border: 1px solid rgb(231, 0, 0);
+  border-radius: 3px;
+  width: 50%;
+  padding: 5px 1rem;
+  outline: none;
 }
 .search-bar button{
   cursor: pointer;
   margin-left: 1rem;
 }
 img{
-  width: 250px;
-  height: 350px;
+  width: 150px;
+  height: 200px;
 }
 .container{
   display: grid;
@@ -42,5 +54,57 @@ img{
   line-height: 0px;
 }
 .movies img{
-  box-shadow: 0 0 8px black;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aliceblue;
+  width: 100%;
+}
+.nav-head{
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-indent: 1rem;
+  height: 1rem;
+  padding: 10px 1rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3px;
+}
+.btn button{
+  font-size: 0.6rem;
+  padding: 4px;
+  cursor: pointer;
+}
+.btn button:last-child{
+  background-color: rgb(1, 210, 1);
+  color: #fff;
+  border: none;
+}
+.favourite{
+  text-align: center;
+}
+table{
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+table img{
+  width: 50px;
+  height: 80px;
+}
+table button{
+  cursor: pointer;
+  padding: 3px 10px;
 }
