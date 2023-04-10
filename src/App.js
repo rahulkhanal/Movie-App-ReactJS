@@ -14,7 +14,7 @@ const App = () => {
           if (inputValue === null)
             return (
               <div className='movies'>
-                <img src={item.image} />
+                <img src={item.image} alt=''/>
                 <h4>{item.Name}</h4>
                 <p>{item.price}</p>
               </div>
@@ -22,7 +22,7 @@ const App = () => {
           else if (item.Name.includes(inputValue)) {
             return (
               <div className='movies'>
-                <img src={item.image} />
+                <img src={item.image} alt=''/>
                 <h4>{item.Name}</h4>
                 <p>{item.price}</p>
               </div>
