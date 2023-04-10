@@ -10,7 +10,7 @@ const Navigation = () => {
     <nav>
         <div className='nav-head'  onClick={()=>Navigate("/watch")}>
             <RiMovie2Line />:
-            <p>{count.length}</p>
+            <p style={{"color":"#F48625"}}>{count.length}</p>
         </div>
         <h1>HelloMovie.com</h1>
     </nav>

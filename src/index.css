@@ -5,11 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  margin: auto;
+  background-color: #232122;
+}
+.movie-site{
   width: 80%;
   margin: auto;
-  background-color: rgb(136, 235, 202);
 }
-
+h1{
+  color: #fff;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -30,7 +36,7 @@ code {
 .search-bar input:focus{
   padding: 3px;
   font-size: 1rem;
-  border: 1px solid rgb(231, 0, 0);
+  /* border: 2px solid #F48625; */
   border-radius: 3px;
   width: 50%;
   padding: 5px 1rem;
@@ -54,7 +60,7 @@ img{
   line-height: 0px;
 }
 .movies img{
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  box-shadow: 0 0 3px rgb(255, 255, 255);
 }
 
 
@@ -62,8 +68,12 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: aliceblue;
+  background-color: #F48625;
   width: 100%;
+  position: sticky;
+  height: 3rem;
+  color: #fff;
+  top: 0;
 }
 .nav-head{
   background-color: black;
@@ -96,9 +106,10 @@ nav{
 }
 table{
   background-color: #fff;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 table img{
   width: 50px;
@@ -107,4 +118,21 @@ table img{
 table button{
   cursor: pointer;
   padding: 3px 10px;
+  background-color: #F48625;
+  color: #fff;
+  border: 3px solid #F48625;
+  border-radius: 5px;
+}
+
+.tablebtn{
+  background-color: rgb(1, 210, 1);
+  color: #fff;
+  border: 2px solid rgb(1, 210, 1);
+  margin-bottom: 1.4rem;
+  transition: all 0.3s ease;
+}
+.tablebtn:hover{
+  background-color: rgb(5, 119, 5);
+  border: 2px solid rgb(5, 119, 5);
+  transition: all 0.3s ease;
 }

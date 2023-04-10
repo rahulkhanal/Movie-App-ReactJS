@@ -2,19 +2,21 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {AiTwotoneDelete} from 'react-icons/ai'
 import { deleteMovie } from './movieSlice'
+import { useNavigate } from 'react-router-dom'
 
 const Watch = () => {
   const movieItem = useSelector((state) => state.movie.movieItem)
-  
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const handleBin = (item)=>{
     dispatch(deleteMovie(item))
   }
   return (
     <div className='favourite'>
-      <h1>Your Favourites:</h1>
+      <h1 style={{color: "#fff"}}>Your Favourites:</h1>
       <div>
         <table>
+          <button onClick={()=>navigate("/")} className='tablebtn'>Back</button>
           {movieItem.map((item, index) => {
             return (
               <tr>

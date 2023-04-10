@@ -55,7 +55,7 @@ const Data = [
     },
     {
         id:10,
-        Name: "Avenger New Portal",
+        Name: "Avenger: Age of Ultron",
         image: "/images/newmarvel.avif",
         price: "$55532"
     },
